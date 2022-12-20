@@ -182,19 +182,23 @@ public class CombinationsSixApp {
         int count20 = 0;
         int count30 = 0;
         int count40 = 0;
+        int count49 = 0;
 
         for (int element : arr) {
-            if (element / 10 <= 1) {
+            if ((double)element / 10 <= 1) {
                 count10++;
-            } else if (element / 10 <= 2) {
+            } else if (((double)element / 10) <= 2 && ((double)element / 10) > 1) {
                 count20++;
-            } else if (element / 10 <= 3) {
+            } else if (((double)element / 10) <= 3 && ((double)element / 10) > 2) {
                 count30++;
-            } else if (element / 10 <= 4) {
+            } else if (((double)element / 10) <= 4 && ((double)element / 10) > 3) {
                 count40++;
+            } else if (((double)element / 10) < 5 && ((double)element / 10) > 4) {
+                count49++;
             }
         }
         return ten >= count10 && ten >= count20
-                && ten >= count30 && ten >= count40;
+                && ten >= count30 && ten >= count40
+                && ten >= count49;
     }
 }
