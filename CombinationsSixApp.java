@@ -185,15 +185,15 @@ public class CombinationsSixApp {
         int count49 = 0;
 
         for (int element : arr) {
-            if ((double)element / 10 <= 1) {
+            if (element > 0 && element <= 10) {
                 count10++;
-            } else if (((double)element / 10) <= 2 && ((double)element / 10) > 1) {
+            } else if (element >= 10 && element < 20) {
                 count20++;
-            } else if (((double)element / 10) <= 3 && ((double)element / 10) > 2) {
+            } else if (element >= 20 && element < 30) {
                 count30++;
-            } else if (((double)element / 10) <= 4 && ((double)element / 10) > 3) {
+            } else if (element >= 30 && element < 40) {
                 count40++;
-            } else if (((double)element / 10) < 5 && ((double)element / 10) > 4) {
+            } else if (element >= 40 && element <= 49) {
                 count49++;
             }
         }
