@@ -187,7 +187,7 @@ public class CombinationsSixApp {
         int count49 = 0;
 
         for (int element : arr) {
-            if (element > 0 && element <= 10) {
+            if (element > 0 && element < 10) {
                 count10++;
             } else if (element >= 10 && element < 20) {
                 count20++;
